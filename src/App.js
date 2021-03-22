@@ -3,10 +3,10 @@ import './App.css';
 import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeatureMovie from './components/FeaturedMovie';
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-export default () => {
+function App() {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
@@ -58,7 +58,7 @@ export default () => {
         {movieList.length <= 0 &&
         
         <div className="loading">
-          <img src="https://i.pinimg.com/originals/f9/0f/76/f90f7689233948005f465d98ead56d44.gif" />
+          <img alt="carregando" src="https://i.pinimg.com/originals/f9/0f/76/f90f7689233948005f465d98ead56d44.gif" />
         </div>
         }
 
@@ -69,3 +69,4 @@ export default () => {
 }
 
 
+export default App;
