@@ -1,4 +1,3 @@
-
 const API_KEY="66af122d572206391c0c39590027b0bd";
 const API_BASE="https://api.themoviedb.org/3";
 
@@ -15,7 +14,7 @@ const basicFetch = async (endpoint) => {
 }
 
 export default {
-    getHomeList: async () => {
+    getHomeList: async (props) => {
         const final = `language=pt-BR&api_key=${API_KEY}`;
         return [
             {
