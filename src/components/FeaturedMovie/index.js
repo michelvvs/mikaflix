@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-export default ({item}) => {
+const featuredMovie = ({item}) => {
     //console.log(item)
 
     let firstDate = new Date(item.first_air_date)
@@ -32,8 +32,8 @@ export default ({item}) => {
                         <div className='featured--seasons'>{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
                         <div className='featured--description'>{description}</div>
                         <div className='featured--buttons'>
-                            <a className="featured--watchButton" href="">► assistir</a>
-                            <a className="featured--myListButton" href="">+ minha lista</a>
+                            <a className="featured--watchButton" href="/#">► assistir</a>
+                            <a className="featured--myListButton" href="/#">+ minha lista</a>
                         </div>
                         <div className='featured--genres'><strong>Gêneros: </strong>{genres.join(', ')}</div>
                     </div>                    
@@ -43,3 +43,5 @@ export default ({item}) => {
         </section>
     )
 }
+
+export default featuredMovie;

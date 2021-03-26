@@ -13,7 +13,7 @@ const basicFetch = async (endpoint) => {
     return json;
 }
 
-export default {
+const homeList = {
     getHomeList: async (props) => {
         const final = `language=pt-BR&api_key=${API_KEY}`;
         return [
@@ -78,3 +78,6 @@ export default {
         return info;
     }
 }
+
+
+export default homeList;
